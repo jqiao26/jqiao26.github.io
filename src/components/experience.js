@@ -22,14 +22,14 @@ function Experience({ bgColor, fill, changePage }) {
       jobTitle: "Software Engineering Intern",
       company: "Uplift",
       dates: "May 2020 - Aug. 2020, Jan 2021 - Apr. 2021",
-      role: "In this role, I worked on the Underwriting team, using technology including Python, Flask, and AWS Lamdba to help people make thoughtful purchases with the Buy Now, Pay Later model",
+      role: "In this role, I worked on the Underwriting team, using technology including Python, Flask, and AWS Lamdba to help people make thoughtful purchases with the Buy Now, Pay Later model.",
       url: "https://uplift.com",
     },
     {
       jobTitle: "Software Developer Intern",
       company: "Genesys",
       dates: "Sep. 2019 - Dec. 2019",
-      role: "In this role, I conducted exploratory data analysis and built machine learning models with TensorFlow and Keras to predict contact center agent performance",
+      role: "In this role, I conducted exploratory data analysis and built machine learning models with TensorFlow and Keras to predict contact center agent performance.",
       url: "https://genesys.com",
     },
   ];
@@ -44,9 +44,10 @@ function Experience({ bgColor, fill, changePage }) {
       />
       <h1 className="text-4xl mt-20 font-poppins font-bold">Experience</h1>
       <div class="flex-col mt-12 justify-start text-left">
-          {jobs.map((job) => {
+          {jobs.map((job, i) => {
             return (
               <ResumeItem
+                key={i}
                 jobTitle={job.jobTitle}
                 company={job.company}
                 dates={job.dates}

@@ -14,6 +14,10 @@ function App() {
     setIsAboutPage(!isAboutPage);
   }
 
+  useEffect(() => {
+    document.body.style.backgroundColor = backgroundInfo.background;
+  }, [backgroundInfo]);
+
   return (
     <div
       className="app"
