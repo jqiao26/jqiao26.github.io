@@ -1,7 +1,7 @@
 import "./App.css";
 import About from "./components/about";
 import Experience from "./components/experience";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [backgroundInfo, setBackgroundInfo] = useState({
@@ -15,8 +15,14 @@ function App() {
   }
 
   return (
-    <div className="app" style={{ backgroundColor: backgroundInfo.background }}>
-      <div className="wrapper" style={{ color: backgroundInfo.fill }}>
+    <div
+      className="app"
+      style={{
+        backgroundColor: backgroundInfo.background,
+        color: backgroundInfo.fill,
+      }}
+    >
+      <div className="wrapper">
         {isAboutPage ? (
           <About
             setBg={setBackgroundInfo}

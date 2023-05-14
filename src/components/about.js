@@ -8,7 +8,7 @@ function About({ setBg, bgColor, fill, changePage }) {
     <div>
       <Navbar bgColor={bgColor} fill={fill} curPage={"about"} changePage={changePage} />
       <h1 className="text-4xl mt-32 font-poppins font-bold">Justin Qiao</h1>
-      <p className="text-2xl m-10 font-poppins text-center">
+      <p className="text-2xl mt-4 font-poppins text-center">
         I'm a{" "}
         <a
           href="https://uwaterloo.ca/systems-design-engineering/"

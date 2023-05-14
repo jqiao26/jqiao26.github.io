@@ -35,7 +35,7 @@ function Experience({ bgColor, fill, changePage }) {
   ];
 
   return (
-    <div class="mb-10">
+    <div class="pb-10">
       <Navbar
         bgColor={bgColor}
         fill={fill}
@@ -43,8 +43,7 @@ function Experience({ bgColor, fill, changePage }) {
         changePage={changePage}
       />
       <h1 className="text-4xl mt-20 font-poppins font-bold">Experience</h1>
-      <div class="flex-col mt-12 justify-start">
-        <div class="text-left">
+      <div class="flex-col mt-12 justify-start text-left">
           {jobs.map((job) => {
             return (
               <ResumeItem
@@ -56,7 +55,6 @@ function Experience({ bgColor, fill, changePage }) {
               />
             );
           })}
-        </div>
       </div>
     </div>
   );
