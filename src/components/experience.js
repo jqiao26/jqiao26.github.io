@@ -5,6 +5,13 @@ import ResumeItem from "./resumeitem";
 function Experience({ bgColor, fill, changePage }) {
   const jobs = [
     {
+      jobTitle: "Software Engineer",
+      company: "Usage AI",
+      dates: "June 2023 - Present",
+      role: "In this role, I launched a cloud cost visibility platform, allowing customers to analyze cloud billing with filtered cost reporting and cost forecasting tools and build customizable cost analytics dashboards to save on cloud spend.",
+      url: "https://usage.ai",
+    },
+    {
       jobTitle: "Software Engineering Intern",
       company: "Minted",
       dates: "May 2022 - Aug. 2022",

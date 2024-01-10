@@ -1,7 +1,6 @@
 import React, { Suspense, useState } from "react";
 import {
   PerspectiveCamera,
-  Environment,
   MeshDistortMaterial,
   ContactShadows,
 } from "@react-three/drei";
