@@ -66,7 +66,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
           </a>
         </div>
         <div>
-          <a href="https://drive.google.com/file/d/1WfYjWBJBrfmugHKE3zVbksedYkTEzt_6/view?usp=sharing">resume</a>
+          <a href="https://drive.google.com/file/d/1YMK_uBmbwYzmzvobPmxPcxc3zoOoqUnC/view?usp=drive_link">resume</a>
         </div>
       </nav>
     </div>
