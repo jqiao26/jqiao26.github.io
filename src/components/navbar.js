@@ -8,7 +8,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
           <p
             class={
               curPage === "about"
-                ? "underline underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
+                ? "underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
                 : "hover:decoration-blue-400"
             }
           >
@@ -19,7 +19,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
           <p
             class={
               curPage === "experience"
-                ? "underline underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
+                ? "underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
                 : "hover:decoration-blue-400"
             }
           >
@@ -31,7 +31,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
             <p
               class={
                 curPage === "linkedin"
-                  ? "underline underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
+                  ? "underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
                   : "hover:decoration-blue-400"
               }
             >
@@ -44,7 +44,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
             <p
               class={
                 curPage === "github"
-                  ? "underline underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
+                  ? "underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
                   : "hover:decoration-blue-400"
               }
             >
@@ -57,7 +57,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
             <p
               class={
                 curPage === "email"
-                  ? "underline underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
+                  ? "underline decoration-lightcobaltblue decoration-2 hover:decoration-blue-400"
                   : "hover:decoration-blue-400"
               }
             >
