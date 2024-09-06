@@ -9,6 +9,8 @@ function ResumeItem({ jobTitle, company, dates, role, url }) {
             {jobTitle} at{" "}
             <a
               href={url}
+              target="_blank"
+              rel="noreferrer"
               class="text-lightcobaltblue cursor-pointer hover:underline decoration-lightcobaltblue decoration-2"
             >
               {company}

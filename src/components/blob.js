@@ -9,22 +9,19 @@ import { a } from "@react-spring/three";
 
 const Blobject = a(MeshDistortMaterial);
 
-function Blob({ toggleBackground }) {
-  const [isHovered, setIsHovered] = useState(false);
+function Blob({ isHovered, setIsHovered, toggleBackground }) {
   const [clickDown, setClickDown] = useState(false);
   const [lightMode, setLightMode] = useState(true);
 
-  const [{ wobble, color }] = useSpring(
-    {
+  const [{ wobble, color }] = useSpring({
       wobble: clickDown ? 1.1 : isHovered ? 1.05 : 1,
       coat: !isHovered ? 0.04 : 1,
       ambient: !isHovered ? 1.5 : 0.5,
       env: !isHovered ? 0.4 : 1,
-      color: isHovered ? "#457b9d" : "#202020",
+      color: isHovered ? "#457b9d" : (lightMode ? "#202020" : "#faf9f6"),
       config: (n) =>
         n === "wobble" && isHovered && { mass: 2, tension: 1000, friction: 10 },
-    },
-    [isHovered, clickDown]
+    }, [isHovered, clickDown]
   );
 
   return (

@@ -6,8 +6,15 @@ function Experience({ bgColor, fill, changePage }) {
   const jobs = [
     {
       jobTitle: "Software Engineer",
+      company: "Teleskope",
+      dates: "April 2024 - Present",
+      role: "",
+      url: "https://teleskope.ai",
+    },
+    {
+      jobTitle: "Software Engineer",
       company: "Usage AI",
-      dates: "June 2023 - Present",
+      dates: "June 2023 - April 2024",
       role: "In this role, I launched a cloud cost visibility platform, allowing customers to analyze cloud billing with filtered cost reporting and cost forecasting tools and build customizable cost analytics dashboards to save on cloud spend.",
       url: "https://usage.ai",
     },
@@ -19,7 +26,7 @@ function Experience({ bgColor, fill, changePage }) {
       url: "https://minted.com",
     },
     {
-      jobTitle: "Global Markets Software Developer Intern",
+      jobTitle: "Software Developer Intern",
       company: "Bank of Montreal",
       dates: "Sep. 2021 - Dec. 2021",
       role: "In this role, I worked on the Data Cognition Team, using technology including React, Python, Flask, and PostgreSQL to build web applications that helped traders gather data insights and analytics before making their trades.",
