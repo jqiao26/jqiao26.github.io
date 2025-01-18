@@ -1,14 +1,19 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import Navbar from "./navbar";
 import ResumeItem from "./resumeitem";
 
 function Experience({ bgColor, fill, changePage }) {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
+
   const jobs = [
     {
       jobTitle: "Software Engineer",
       company: "Teleskope",
       dates: "April 2024 - Present",
-      role: "",
+      role: "In this role, I built a policy-based Data Loss Prevention platform with Golang, React, and MySQL to automatically detect, redact, and remediate sensitive customer data at the source.",
       url: "https://teleskope.ai",
     },
     {
@@ -34,7 +39,7 @@ function Experience({ bgColor, fill, changePage }) {
     },
     {
       jobTitle: "Software Engineering Intern",
-      company: "Uplift",
+      company: "Upgrade, Inc.",
       dates: "May 2020 - Aug. 2020, Jan 2021 - Apr. 2021",
       role: "In this role, I worked on the Underwriting team, using technology including Python, Flask, and AWS Lamdba to help people make thoughtful purchases with the Buy Now, Pay Later model.",
       url: "https://uplift.com",
@@ -49,15 +54,23 @@ function Experience({ bgColor, fill, changePage }) {
   ];
 
   return (
-    <div class="pb-10">
+    <div class='pb-10'>
       <Navbar
         bgColor={bgColor}
         fill={fill}
         curPage={"experience"}
         changePage={changePage}
       />
-      <h1 className="text-4xl mt-20 font-poppins font-bold">Experience</h1>
-      <div class="flex-col mt-12 justify-start text-left">
+      <>
+        <h1
+          className={
+            isMobile
+              ? "text-4xl mt-0 font-poppins font-bold"
+              : "text-4xl mt-10 font-poppins font-bold"
+          }>
+          Experience
+        </h1>
+        <div class='flex-col mt-12 justify-start text-left'>
           {jobs.map((job, i) => {
             return (
               <ResumeItem
@@ -70,7 +83,8 @@ function Experience({ bgColor, fill, changePage }) {
               />
             );
           })}
-      </div>
+        </div>
+      </>
     </div>
   );
 }

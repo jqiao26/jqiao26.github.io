@@ -1,6 +1,8 @@
 import "./App.css";
+import { ChakraProvider } from "@chakra-ui/react";
 import About from "./components/about";
 import Experience from "./components/experience";
+import MediaQuery from "react-responsive";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -18,31 +20,37 @@ function App() {
     document.body.style.backgroundColor = backgroundInfo.background;
   }, [backgroundInfo]);
 
+  const page = isAboutPage ? (
+    <About
+      setBg={setBackgroundInfo}
+      bgColor={backgroundInfo.background}
+      fill={backgroundInfo.fill}
+      changePage={changePage}
+    />
+  ) : (
+    <Experience
+      bgColor={backgroundInfo.background}
+      fill={backgroundInfo.fill}
+      changePage={changePage}
+    />
+  );
+
   return (
-    <div
-      className="app"
-      style={{
-        backgroundColor: backgroundInfo.background,
-        color: backgroundInfo.fill,
-      }}
-    >
-      <div className="wrapper">
-        {isAboutPage ? (
-          <About
-            setBg={setBackgroundInfo}
-            bgColor={backgroundInfo.background}
-            fill={backgroundInfo.fill}
-            changePage={changePage}
-          />
-        ) : (
-          <Experience
-            bgColor={backgroundInfo.background}
-            fill={backgroundInfo.fill}
-            changePage={changePage}
-          />
-        )}
+    <ChakraProvider>
+      <div
+        className='app'
+        style={{
+          backgroundColor: backgroundInfo.background,
+          color: backgroundInfo.fill,
+        }}>
+        <MediaQuery query='(max-device-width: 1024px)'>
+          <div className='wrapper-mobile'>{page}</div>
+        </MediaQuery>
+        <MediaQuery query='(min-device-width: 1024px)'>
+          <div className='wrapper'>{page}</div>
+        </MediaQuery>
       </div>
-    </div>
+    </ChakraProvider>
   );
 }
 

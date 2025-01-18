@@ -1,19 +1,14 @@
-html,
-#root,
-main,
-body {
-  /* background-color: #faf9f6; */
-  /* height: 100%; */
-}
-
-.app {
-  /* height: 100%; */
-}
-
 .wrapper {
   text-align: center;
   margin-right: 30%;
   margin-left: 30%;
+  height: 100%;
+}
+
+.wrapper-mobile {
+  text-align: center;
+  margin-right: 7%;
+  margin-left: 7%;
   height: 100%;
 }
 
