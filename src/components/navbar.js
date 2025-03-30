@@ -75,7 +75,7 @@ function Navbar({ bgColor, fill, curPage, changePage }) {
         <a
           target='_blank'
           rel='noreferrer'
-          href='https://drive.google.com/file/d/1573XZ_z9JV00mfGb__Yj8oMzFFI4kUbL/view?usp=sharing'>
+          href='https://drive.google.com/file/d/1h7j3QEU-eInETbPESHi0lD5XfGSzr9Xz/view?usp=drive_link'>
           resume
         </a>
       </div>
